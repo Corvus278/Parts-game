@@ -1,6 +1,6 @@
 function makeCard(valueCard) {
   const li = document.createElement('li');
-  li.classList.add('play-card');
+  li.classList.add('play-card', 'play-card--close');
   const p = document.createElement('p');
   p.classList.add('play-card__value');
   const div = makeDiv('play-card__value-wrapper');
@@ -28,7 +28,7 @@ function makeList(cardCount = 16) {
       const li = makeCard(valueCard);
       // Обработка нажатия
       li.addEventListener('click', () => {
-        li.classList.toggle('play-card--active');
+        li.classList.toggle('play-card--close');
       })
 
       // Добавление получившийся карточки в список

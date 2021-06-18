@@ -18,14 +18,14 @@ p {
 }
 
 .container {
-  width: 70%;
+  width: 80%;
   margin: 0px auto;
 }
 
 .card-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: -50.4px;
+  margin-bottom: -2.85%;
 }
 
 .play-card:not(:nth-child(8n)) {
@@ -33,8 +33,9 @@ p {
 }
 
 .play-card {
+  position: relative;
   width: 10%;
-  margin-bottom: 50.4px;
+  margin-bottom: 2.85%;
   background-color: white;
   border-radius: 10px;
 }
@@ -52,4 +53,16 @@ p {
   left: 0;
   transform: translateY(-50%);
   text-align: center;
+  font-size: 32px;
+}
+
+.play-card--close::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 10px;
+  background-image: url(../pictures/shirt-back.jpg);
 }
