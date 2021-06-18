@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+.index-body {
+  background: url(../pictures/tabel-back.jpg);
+  font-family: sans-serif;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+p {
+  margin: 0px;
+}
+
+.container {
+  width: 70%;
+  margin: 0px auto;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.play-card:not(:last-child) {
+  margin-right: 2.5%;
+}
+
+.play-card {
+  width: 10%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.play-card__value-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 160%;
+}
+
+.play-card__value {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
