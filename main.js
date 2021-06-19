@@ -46,15 +46,15 @@ function makeList(cardCount = 16) {
 
         // Значения карт не равны
         if (selectedCard.textContent !== li.textContent) {
-          selectedCard.classList.toggle('play-card--close');
-          selectedCard.classList.toggle('play-card--open');
-          selectedCard.classList.toggle('play-card--selected');
-          li.classList.toggle('play-card--selected')
+          selectedCard.classList.add('play-card--close');
+          selectedCard.classList.remove('play-card--open');
+          selectedCard.classList.remove('play-card--selected');
+          li.classList.add('play-card--selected');
         }
 
         // Значения карт равны
         else {
-          selectedCard.classList.toggle('play-card--selected');
+          selectedCard.classList.remove('play-card--selected');
         }
       })
 
