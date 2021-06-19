@@ -17,6 +17,22 @@ p {
   margin: 0px;
 }
 
+.play-card__value {
+  /* Запрещение выделения текста */
+
+  /* Modern */
+  user-select: none;
+
+  /* For IE */
+  -ms-user-select: none;
+
+  /* For Mozilla */
+  -moz-user-select: none;
+
+  /* For Chrome/Opera */
+  -webkit-user-select: none;
+}
+
 .container {
   width: 80%;
   margin: 0px auto;
@@ -38,6 +54,7 @@ p {
   margin-bottom: 2.85%;
   background-color: white;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .play-card__value-wrapper {

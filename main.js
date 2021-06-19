@@ -28,14 +28,37 @@ function makeList(cardCount = 16) {
       const li = makeCard(valueCard);
       // Обработка нажатия
       li.addEventListener('click', () => {
+        // Карта "переворачивается"
         li.classList.toggle('play-card--close');
+        li.classList.toggle('play-card--open');
+        // Находится последняя открытая карта
+        let selectedCard = document.getElementsByClassName('play-card--selected')[0];
+
+        // Проверка карты на одинаковое значение с последней открытой
+        // открытых карт ещё не было
+        if (selectedCard === undefined) {
+          li.classList.add('play-card--selected');
+          return
+        }
+
+        // Значения карт не равны
+        if (selectedCard.textContent !== li.textContent) {
+          selectedCard.classList.toggle('play-card--close');
+          selectedCard.classList.toggle('play-card--open');
+          selectedCard.classList.toggle('play-card--selected');
+          li.classList.toggle('play-card--selected')
+        }
+
+        // Значения карт равны
+        else {
+          selectedCard.classList.toggle('play-card--selected');
+        }
       })
 
       // Добавление получившийся карточки в список
       ul.append(li);
     }
   }
-  console.log(valueList.sort())
   return ul;
 }
 
