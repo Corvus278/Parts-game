@@ -28,6 +28,9 @@ function makeList(cardCount = 16) {
       const li = makeCard(valueCard);
       // Обработка нажатия
       li.addEventListener('click', () => {
+        if (li.classList.contains('play-card--open')) {
+          return
+        }
         // Карта "переворачивается"
         li.classList.toggle('play-card--close');
         li.classList.toggle('play-card--open');
