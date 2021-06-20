@@ -3,9 +3,10 @@ function makeCard(valueCard) {
   li.classList.add('play-card', 'play-card--close');
   const p = document.createElement('p');
   p.classList.add('play-card__value');
+  p.style.display = 'none';
+  p.textContent = valueCard;
   const div = makeDiv('play-card__value-wrapper');
 
-  p.textContent = valueCard;
   div.append(p);
   li.append(div);
   return li;
@@ -32,6 +33,7 @@ function makeList(cardCount = 16) {
           return
         }
         // Карта "переворачивается"
+        li.querySelector('.play-card__value').style.display = 'inline-block';
         li.classList.toggle('play-card--close');
         li.classList.toggle('play-card--open');
         // Находится последняя открытая карта
