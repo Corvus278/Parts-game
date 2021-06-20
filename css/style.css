@@ -34,13 +34,15 @@ p {
 }
 
 .container {
-  width: 80%;
+  max-width: 1720px;
+  padding: 0px 15px;
   margin: 0px auto;
 }
 
 .card-list {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 50px;
   margin-bottom: -2.85%;
 }
 

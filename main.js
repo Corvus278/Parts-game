@@ -75,12 +75,24 @@ function makeDiv(class_) {
 }
 
 
+function endConfirm() {
+  ask = confirm('Время вышло!\nПоменять кол-во карточек?');
+  if (ask) {
+  } else {
+    window.location.href = window.location.href;
+  }
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
   // Создание дом элементов
   const container = makeDiv('container');
-  const ulFull = makeList()
+  const ulFull = makeList();
 
   // Сборка DOM
   container.append(ulFull);
   document.body.append(container);
+
+  // Таймер
+  let timer = setTimeout(endConfirm, 60000);
 })
