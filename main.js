@@ -57,6 +57,11 @@ function makeList(cardCount = 16) {
         // Значения карт равны
         else {
           selectedCard.classList.remove('play-card--selected');
+          setTimeout(() => {
+            if (document.getElementsByClassName('play-card--close').length == 0) {
+              endConfirm('Победа!');
+            }
+          }, 100)
         }
       })
 
@@ -75,8 +80,9 @@ function makeDiv(class_) {
 }
 
 
-function endConfirm() {
-  ask = confirm('Время вышло!\nПоменять кол-во карточек?');
+function endConfirm(firstStr) {
+  askText = `${firstStr} \nПоменять кол-во карточек?`
+  ask = confirm(askText);
   if (ask) {
     window.location.href = window.location.href;
   } else {
@@ -98,7 +104,9 @@ function runPlay(cardCount) {
   document.body.append(container);
 
   // Таймер
-  setTimeout(endConfirm, 60000);
+  setTimeout(() => {
+    endConfirm('Время вышло!')
+  }, 60000);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
