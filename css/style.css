@@ -2,11 +2,6 @@
   box-sizing: border-box;
 }
 
-.index-body {
-  background: url(../pictures/tabel-back.jpg);
-  font-family: sans-serif;
-}
-
 ul {
   margin: 0px;
   padding: 0px;
@@ -15,6 +10,15 @@ ul {
 
 p {
   margin: 0px;
+}
+
+h1 {
+  margin: 0px;
+}
+
+.play-body {
+  background: url(../pictures/tabel-back.jpg);
+  font-family: sans-serif;
 }
 
 .play-card__value {
@@ -84,4 +88,56 @@ p {
   right: 0;
   border-radius: 10px;
   background-image: url(../pictures/shirt-back.jpg);
+}
+
+.index-body {
+  padding: 0px 10px;
+  margin: 0px;
+  background-color: #3c723f;
+  font-family: sans-serif;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 10px;
+  max-width: 650px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+
+.form__content {
+  padding-left: 20px;
+}
+
+.form__label {
+  margin-bottom: 15px;
+}
+
+.input--card-count {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 5px;
+  max-width: 165px;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+.form-submit {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 0px;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.warning {
+  color:dimgray;
+  font-style: italic;
 }

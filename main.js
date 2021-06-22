@@ -84,10 +84,10 @@ function endConfirm() {
 }
 
 
-document.addEventListener('DOMContentLoaded', () => {
+function runPlay(cardCount) {
   // Создание дом элементов
   const container = makeDiv('container');
-  const ulFull = makeList();
+  const ulFull = makeList(cardCount);
 
   // Сборка DOM
   container.append(ulFull);
@@ -95,4 +95,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Таймер
   let timer = setTimeout(endConfirm, 60000);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('.form');
+  const input = form.querySelector('.input--card-count');
+
+  form.addEventListener('submit', (e) => {
+    // Убираем перезагрузку страницы после нажатия кнопки
+    e.preventDefault();
+    form.style.display = 'none';
+
+    // Валидация количества карточек
+    let cardCount = input.value % 2 === 0 ? input.value : input.value - 1;
+    if (cardCount === '') { cardCount = 8 };
+
+    // Запуск игры
+    runPlay(cardCount);
+  })
 })

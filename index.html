@@ -6,11 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Пары</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <script defer src="./main.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="main.js"></script>
 </head>
 
 <body class="index-body">
+  <form class="form">
+    <label class="form__label" for="card-count">
+      <h1>Какое количество карточек хотите?</h1>
+    </label>
+    <div class="form__content">
+      <input class="input input--card-count" id="card-count" type="number" min="8" value="8">
+      <button class="form-submit" type="submit">Начать</button>
+      <p class="warning">
+        *Если вы играете с телефона, для удобства переверните
+        горизонтально экран
+      </p>
+    </div>
+  </form>
 </body>
 
 </html>
