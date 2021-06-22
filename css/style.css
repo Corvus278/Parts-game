@@ -86,8 +86,8 @@ h1 {
   top: 0;
   bottom: 0;
   right: 0;
-  border-radius: 10px;
-  background-image: url(../pictures/shirt-back.jpg);
+  border-radius: 8px;
+  background-color:mediumpurple;
 }
 
 .index-body {
