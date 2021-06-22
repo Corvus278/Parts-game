@@ -78,8 +78,12 @@ function makeDiv(class_) {
 function endConfirm() {
   ask = confirm('Время вышло!\nПоменять кол-во карточек?');
   if (ask) {
-  } else {
     window.location.href = window.location.href;
+  } else {
+    const cardCount = document.getElementsByClassName('play-card').length;
+    console.log(cardCount)
+    document.querySelector('.container').remove()
+    runPlay(cardCount);
   }
 }
 
@@ -94,7 +98,7 @@ function runPlay(cardCount) {
   document.body.append(container);
 
   // Таймер
-  let timer = setTimeout(endConfirm, 60000);
+  setTimeout(endConfirm, 60000);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
